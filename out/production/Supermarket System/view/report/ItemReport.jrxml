@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItemReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdd7666f-c978-456f-a48e-8abf61009b25">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC SM Connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select itemCode,sum(qty) as qty from OrderDetails group by itemCode order by qty desc]]>
+	</queryString>
+	<field name="itemCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="itemCode"/>
+		<property name="com.jaspersoft.studio.field.label" value="itemCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orderdetails"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="253" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="187" width="555" height="17" uuid="54963ed1-c6d9-4234-92dd-86eea30d90fd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TheGym@gmail.com]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="0" y="215" width="555" height="20" uuid="d72dc2fa-beda-4d7b-814f-a8bed9c27112"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="129" width="555" height="33" uuid="0063c3b3-d0b9-485a-9771-8d8ed135ebda"/>
+				<textElement textAlignment="Center">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supermarket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="555" height="24" uuid="2508eebc-a46a-4236-b289-ff82ab74182d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. 283 B2 Fernando Road Wennappuwa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="174" width="555" height="24" uuid="5c235a5d-462a-40ce-bef0-195b3adbdc18"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile No. 0775919052 / 0712509195 ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="201" width="555" height="20" uuid="30430132-f929-4913-863e-f9151d895612"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="130" y="242" width="300" height="1" uuid="8411af4f-9c73-4814-9da0-71feb2a5a32b"/>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="10" width="555" height="30" forecolor="#030303" uuid="ee93a5bc-c65e-427d-b81b-5601a8e9944e"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="233" y="40" width="114" height="94" uuid="30cc05b5-db2c-423b-8835-2252899136cb"/>
+				<imageExpression><![CDATA["view/assents/item.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<summary>
+		<band height="387" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="0" width="555" height="387" uuid="3d85c64e-391a-4e07-bbd2-7dd8d681c076"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{itemCode}]]></keyExpression>
+					<valueExpression><![CDATA[$F{qty}]]></valueExpression>
+					<labelExpression><![CDATA[$F{itemCode}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrderContext" prefHeight="490.0" prefWidth="790.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <children>
+      <ImageView fitHeight="206.0" fitWidth="532.0" layoutX="-24.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Customer_survey_re_v9cj%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="188.0" fitWidth="234.0" layoutX="553.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%206%20(2).png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblOrderDetails" layoutX="169.0" layoutY="111.0" prefHeight="320.0" prefWidth="493.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" style="-fx-background-color: #08e7d1;" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="126.0" style="-fx-background-color: #08e7d1;" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="50.0" style="-fx-background-color: #08e7d1;" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="81.0" style="-fx-background-color: #08e7d1;" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="88.0" style="-fx-background-color: #08e7d1;" text="Total" />
+            <TableColumn fx:id="colDelete" prefWidth="72.0" style="-fx-background-color: #08e7d1;" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbCustomerId" focusColor="#03b9a6" labelFloat="true" layoutX="15.0" layoutY="73.0" prefHeight="25.0" prefWidth="140.0" promptText="          Customer ID" unFocusColor="#bcb9b9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtCustomerSalary" focusColor="#08ccb9" labelFloat="true" layoutX="12.0" layoutY="214.0" prefHeight="25.0" prefWidth="147.0" promptText="         Customer Salary" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" focusColor="#08ccb9" labelFloat="true" layoutX="12.0" layoutY="167.0" prefHeight="25.0" prefWidth="147.0" promptText="       Customer Address" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" focusColor="#08ccb9" labelFloat="true" layoutX="12.0" layoutY="120.0" prefHeight="25.0" prefWidth="147.0" promptText="         Customer Name" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#03b9a6" labelFloat="true" layoutX="16.0" layoutY="26.0" prefHeight="25.0" prefWidth="140.0" promptText="           Item Code" unFocusColor="#bcb9b9">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtDescription" focusColor="#08ccb9" labelFloat="true" layoutX="237.0" layoutY="451.0" prefHeight="25.0" prefWidth="147.0" promptText="         Item Description" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="#08ccb9" labelFloat="true" layoutX="384.0" layoutY="451.0" prefHeight="25.0" prefWidth="147.0" promptText="           Qty On Hand" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="#08ccb9" labelFloat="true" layoutX="532.0" layoutY="451.0" prefHeight="25.0" prefWidth="147.0" promptText="              Unit Price" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <ImageView fitHeight="44.0" fitWidth="57.0" layoutX="210.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Cloud_docs_re_xjht.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="183.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Cloud_docs_ree_xjht.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="300.0" layoutY="22.0" opacity="0.6" prefHeight="44.0" prefWidth="259.0" text="00 : 00 : 00" textFill="#b9b9b9">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="581.0" layoutY="12.0" text="2021-08 -19" textFill="#3b4161">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="759.0" layoutY="11.0" onMouseClicked="#openLoginForm" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%205.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="700.0" layoutY="3.0" onMouseClicked="#opencashierDashBoard" text="&lt;" textFill="#b2abab">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="685.0" layoutY="300.0" prefHeight="25.0" prefWidth="89.0" promptText="        QTY">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="696.0" layoutY="382.0" prefHeight="22.0" prefWidth="65.0" text="Order ID" textFill="#049485">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="709.0" layoutY="402.0" prefHeight="22.0" prefWidth="52.0" text="O001" textFill="#080c367b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="709.0" layoutY="434.0" prefHeight="22.0" prefWidth="39.0" text="Total" textFill="#049485">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="709.0" layoutY="456.0" prefHeight="22.0" prefWidth="80.0" text="O001" textFill="#080c367b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="729.0" layoutY="13.0" onMouseClicked="#clearTextField" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/1418413-middle.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="13.0" layoutY="457.0" onAction="#btnPlaceOrder_OnAction" prefHeight="23.0" prefWidth="89.0" style="-fx-background-color: #2F384C; -fx-background-radius: 20;" text="PLACE ORDER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="109.0" layoutY="458.0" onAction="#btnAdd_OnAction" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="172.0" layoutY="458.0" onAction="#btnReport" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="REPORT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

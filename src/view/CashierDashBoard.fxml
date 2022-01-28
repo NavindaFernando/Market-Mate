@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cashierDashBoardContext" prefHeight="490.0" prefWidth="790.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierDashBoardController">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="20.0" prefHeight="448.0" prefWidth="215.0" style="-fx-background-color: #02b1a0;">
+         <children>
+            <Separator layoutX="40.0" layoutY="94.0" prefHeight="3.0" prefWidth="96.0" />
+            <Separator layoutX="40.0" layoutY="141.0" prefHeight="3.0" prefWidth="96.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="245.0" fitWidth="435.0" layoutX="72.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_personal_file_222m.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="164.0" layoutY="374.0" text="00 : 00 : 00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerId" focusColor="#02b1a0" labelFloat="true" layoutX="518.0" layoutY="264.0" opacity="0.9" prefHeight="25.0" prefWidth="215.0" promptText="Customer Id" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" focusColor="#02b1a0" labelFloat="true" layoutX="518.0" layoutY="305.0" opacity="0.9" prefHeight="25.0" prefWidth="215.0" promptText="Customer Name" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" focusColor="#02b1a0" labelFloat="true" layoutX="518.0" layoutY="347.0" opacity="0.9" prefHeight="25.0" prefWidth="215.0" promptText="Customer Address" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="488.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="11.0" layoutX="491.0" layoutY="312.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/349-3495832_tag-icon-png-file-tag-icon-grey.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="11.0" layoutX="491.0" layoutY="351.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/94-941550_location-icon-png-grey-transparent-png-location-icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="628.0" layoutY="7.0" prefHeight="20.0" prefWidth="89.0" text="2021 - 08 - 18" textFill="#9a9a9a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomers" layoutX="324.0" layoutY="33.0" prefHeight="200.0" prefWidth="461.0">
+        <columns>
+          <TableColumn prefWidth="92.0" style="-fx-background-color: #08e7d1;" text="Customer Id" />
+          <TableColumn prefWidth="135.0" style="-fx-background-color: #08e7d1;" text="Customer Name" />
+            <TableColumn prefWidth="131.0" style="-fx-background-color: #08e7d1;" text="Customer Address" />
+            <TableColumn prefWidth="102.0" style="-fx-background-color: #08e7d1;" text="Salary" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="759.0" layoutY="6.0" onMouseClicked="#openLogin" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%205.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="729.0" layoutY="10.0" onMouseClicked="#clearTextField" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/1418413-middle.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btnAddNewCustomer" layoutX="316.0" layoutY="439.0" onAction="#btnDisplayTextField" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #2F384C;" text="Add new Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="159.0" layoutY="98.0" onAction="#btnSave_OnAction" prefHeight="32.0" prefWidth="156.0" style="-fx-background-color: #2F384C; -fx-background-radius: 20;" text="Save customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="159.0" layoutY="147.0" onAction="#btnDelete_OnAction" prefHeight="32.0" prefWidth="156.0" style="-fx-background-color: #2F384C; -fx-background-radius: 20;" text="Delete customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="701.0" layoutY="449.0" onAction="#openPlaceOrderForm" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="Next" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtCustomerSalary" focusColor="#02b1a0" labelFloat="true" layoutX="518.0" layoutY="388.0" opacity="0.9" prefHeight="25.0" prefWidth="215.0" promptText="Customer Salary" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="11.0" layoutX="491.0" layoutY="395.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/349-3495832_tag-icon-png-file-tag-icon-grey.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

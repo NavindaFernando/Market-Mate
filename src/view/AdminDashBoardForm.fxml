@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminDashBoardContext" prefHeight="490.0" prefWidth="790.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardFormController">
+   <children>
+      <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="18.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/16826390501624746543-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="361.0" fitWidth="426.0" layoutX="-23.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_empty_cart_co35.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtDescription" focusColor="#08ccb9" labelFloat="true" layoutX="43.0" layoutY="138.0" onAction="#moveToPackSize" prefHeight="25.0" prefWidth="147.0" promptText="Description" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtCode" focusColor="#08ccb9" labelFloat="true" layoutX="43.0" layoutY="97.0" prefHeight="25.0" prefWidth="147.0" promptText="Item Code" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="#08ccb9" labelFloat="true" layoutX="43.0" layoutY="178.0" onAction="#moveToQtyOnHand" prefHeight="25.0" prefWidth="147.0" promptText="Unit Price" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="#08ccb9" labelFloat="true" layoutX="43.0" layoutY="219.0" prefHeight="25.0" prefWidth="147.0" promptText="Qty On Hand" unFocusColor="#dddbdb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="32.0" layoutX="18.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/3876800771624746544-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="32.0" layoutX="18.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/6525228411624746541-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="19.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/13773360931624746542-128%20(1).png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="81.0" layoutY="422.0" text="00 : 00 : 00" textFill="#3b4161">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblItems" layoutX="329.0" layoutY="188.0" prefHeight="225.0" prefWidth="440.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="81.0" style="-fx-background-color: #08e7d1;" text="Code" />
+          <TableColumn fx:id="colDiscription" prefWidth="137.0" style="-fx-background-color: #08e7d1;" text="Description" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="114.0" style="-fx-background-color: #08e7d1;" text="Qty On Hand" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="107.0" style="-fx-background-color: #08e7d1;" text="Unit Price" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="151.0" fitWidth="108.0" layoutX="681.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Segment_analysis_re_ocsl.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="289.0" layoutX="637.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_screen_time_vkev.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="14.0" layoutY="10.0" text="2021 - 08  - 19" textFill="#3b4161">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="72.0" layoutX="269.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_survey_05s5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="90.0" layoutX="296.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_survey_05s5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="758.0" layoutY="11.0" onMouseClicked="#openLogin" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%205.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="15.0" fitWidth="18.0" layoutX="723.0" layoutY="12.0" onMouseClicked="#clearTextField" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/1418413-middle.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btnDelete" layoutX="489.0" layoutY="429.0" onAction="#btnDelete_OnAction" prefHeight="29.0" prefWidth="115.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="REMOVE ITEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="614.0" layoutY="429.0" onAction="#btnSave_OnAction" prefHeight="29.0" prefWidth="67.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="SAVE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddNewItem" layoutX="367.0" layoutY="430.0" onAction="#displayTextField" prefHeight="29.0" prefWidth="115.0" style="-fx-background-color: #2F384C; -fx-background-radius: 20;" text="ADD ITEM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="594.0" layoutY="78.0" onAction="#openReport" prefHeight="29.0" prefWidth="135.0" style="-fx-background-color: #02b1a0; -fx-background-radius: 20;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

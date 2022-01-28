@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderOrderDetailContext" prefHeight="490.0" prefWidth="790.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderOrderDetailFormController">
+   <children>
+      <ImageView fitHeight="163.0" fitWidth="137.0" layoutX="649.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Progress_data_re_rv4p.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblOrder" layoutX="69.0" layoutY="241.0" prefHeight="222.0" prefWidth="483.0">
+        <columns>
+          <TableColumn fx:id="colOrderId" prefWidth="75.0" style="-fx-background-color: #08e7d1;" text="Order ID" />
+          <TableColumn fx:id="colCustomerId" prefWidth="75.0" style="-fx-background-color: #08e7d1;" text="Customer ID" />
+            <TableColumn fx:id="colOrderDate" prefWidth="126.0" style="-fx-background-color: #08e7d1;" text="Order Date" />
+            <TableColumn fx:id="colTime" prefWidth="128.0" style="-fx-background-color: #08e7d1;" text="Time" />
+            <TableColumn fx:id="colCost" prefWidth="78.0" style="-fx-background-color: #08e7d1;" text="Cost" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="85.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Metrics_re_6g90.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="145.0" layoutX="190.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Metrics_re_6g900.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="309.0" layoutY="39.0" prefHeight="179.0" prefWidth="466.0">
+        <columns>
+          <TableColumn prefWidth="116.0" style="-fx-background-color: #08e7d1;" text="Item Code" />
+          <TableColumn prefWidth="132.0" style="-fx-background-color: #08e7d1;" text="Order ID" />
+            <TableColumn prefWidth="102.0" style="-fx-background-color: #08e7d1;" text="Qty" />
+            <TableColumn prefWidth="115.0" style="-fx-background-color: #08e7d1;" text="Price" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblDate" disable="true" layoutX="561.0" layoutY="10.0" prefHeight="20.0" prefWidth="100.0" text="2021-08 -19" textFill="#0d0236">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" disable="true" layoutX="669.0" layoutY="10.0" text="00 : 00 : 00" textFill="#0d0236">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="72.0" layoutX="577.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/button_clear.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="52.0" layoutX="101.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Cloud_docs_re_xjht.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="29.0" layoutX="73.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Cloud_docs_ree_xjht.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="758.0" layoutY="7.0" onMouseClicked="#openLoginForm" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/png%205.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="107.0" layoutX="577.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assents/undraw_Progress_data_reee_rv4p.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="8.0" onMouseClicked="#openplaceOrderForm" text="&lt;" textFill="#b2abab">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
